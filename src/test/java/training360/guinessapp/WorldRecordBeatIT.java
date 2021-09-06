@@ -59,7 +59,7 @@ public class WorldRecordBeatIT {
 
     @Test
     void test_beatSuccessful() {
-        BeatWorldRecordCommand inputCommand = new BeatWorldRecordCommand(worldRecordId, 5.92);
+        BeatWorldRecordCommand inputCommand = new BeatWorldRecordCommand(glenId, 5.92);
         BeatWorldRecordDto result = template.exchange("/api/worldrecords/{id}/beatrecords",
                 HttpMethod.PUT,
                 new HttpEntity(inputCommand),
